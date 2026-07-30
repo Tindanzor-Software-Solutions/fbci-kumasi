@@ -1,36 +1,39 @@
-import { QueryClient } from "@tanstack/react-query"
-import { createFileRoute } from "@tanstack/react-router"
 import { projectDetailQuery } from "@/features/project"
 import { generateMetaData } from "@/libs/tanstack"
 import { ProjectDetailPage } from "@/screens/projects"
 import { HydrationProvider } from "@/shared/ui/HydationProvider"
+import { QueryClient } from "@tanstack/react-query"
+import { createFileRoute } from "@tanstack/react-router"
 
-export const Route = createFileRoute("/__public/projects/project/$id")({
+export const Route = createFileRoute("/__public/projects/project/$title")({
   component: RouteComponent,
   loader: async ({ params }) => {
     const qc = new QueryClient()
-    const query = projectDetailQuery(params.id)
+    const { title } = params
+    const id = title.split("-").pop()
+    if (!id) throw new Error("Failed to retrieve project info")
+
+    const query = projectDetailQuery(id)
     const data = await qc.fetchQuery(query)
-    return { queries: [{ queryKey: query.queryKey, data }], data }
+    return { data, queryKey: query.queryKey, id }
   },
-  head: ({ loaderData: { data } = {}, params }) => ({
+  head: ({ loaderData: { data, id } = {} }) => ({
     meta: generateMetaData({
       title: data?.title ?? "Project Details",
       description:
         data?.story ??
         "View project details and support FBCI's ongoing missions.",
-      path: `projects/project/${params.id}`,
+      path: `projects/project/${id}`,
       images: data?.image,
     }),
   }),
 })
 
 function RouteComponent() {
-  const { queries } = Route.useLoaderData()
-  const { id } = Route.useParams()
+  const { data, queryKey, id } = Route.useLoaderData()
 
   return (
-    <HydrationProvider queries={queries}>
+    <HydrationProvider queries={[{ queryKey, data }]}>
       <ProjectDetailPage id={id} />
     </HydrationProvider>
   )

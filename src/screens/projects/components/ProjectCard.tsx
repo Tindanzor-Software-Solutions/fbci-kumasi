@@ -1,10 +1,11 @@
-import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
 import type { Project } from "@/features/project"
 import { routes } from "@/shared/routes"
 import { slideUp } from "@/shared/ui/Framer"
 import { Link } from "@/shared/ui/primitives/button"
 import { Image } from "@/shared/ui/primitives/Image"
+import { formatToUrlSlug } from "@/shared/utils/textFormat"
+import { motion } from "framer-motion"
+import { ArrowRight } from "lucide-react"
 
 type ProjectCardProps = Project
 
@@ -25,7 +26,9 @@ export function ProjectCard({ id, image, title }: ProjectCardProps) {
         </div>
         <div className="p-8 grid gap-y-1">
           <Link
-            href={routes.projects.projectById(id)}
+            href={routes.projects.projectById(
+              formatToUrlSlug(`${title} ${id}`),
+            )}
             variant="primary"
             size="sm"
             className="w-fit gap-x-2 link px-4 ml-auto py-1 rounded-full"
