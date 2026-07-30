@@ -13,7 +13,7 @@ export const toCapitalized = (text: string) => {
 }
 export const formatToUrlSlug = (text: string) => {
   if (!text || typeof text !== "string") return ""
-  return text.trim().replaceAll(" ", "-")
+  return text.toLowerCase().trim().replaceAll(" ", "-")
 }
 
 export const formatFromUrlSpaces = (text: string) => {

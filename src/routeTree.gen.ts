@@ -34,7 +34,7 @@ import { Route as _protectedDashboardConferencesIndexRouteImport } from './route
 import { Route as _protectedDashboardConferencesNewRouteImport } from './routes/__protected/dashboard/conferences/new'
 import { Route as _protectedDashboardProjectsIndexRouteImport } from './routes/__protected/dashboard/projects/index'
 import { Route as _protectedDashboardProjectsNewRouteImport } from './routes/__protected/dashboard/projects/new'
-import { Route as _publicProjectsProjectIdRouteImport } from './routes/__public/projects/project.$id'
+import { Route as _publicProjectsProjectTitleRouteImport } from './routes/__public/projects/project.$title'
 import { Route as _protectedDashboardProjectsEditIdRouteImport } from './routes/__protected/dashboard/projects/edit.$id'
 
 const _publicRouteRoute = _publicRouteRouteImport.update({
@@ -172,10 +172,10 @@ const _protectedDashboardProjectsNewRoute =
     path: '/projects/new',
     getParentRoute: () => _protectedDashboardRouteRoute,
   } as any)
-const _publicProjectsProjectIdRoute =
-  _publicProjectsProjectIdRouteImport.update({
-    id: '/projects/project/$id',
-    path: '/projects/project/$id',
+const _publicProjectsProjectTitleRoute =
+  _publicProjectsProjectTitleRouteImport.update({
+    id: '/projects/project/$title',
+    path: '/projects/project/$title',
     getParentRoute: () => _publicRouteRoute,
   } as any)
 const _protectedDashboardProjectsEditIdRoute =
@@ -208,7 +208,7 @@ export interface FileRoutesByFullPath {
   '/auth/dashboard/signup': typeof _protectedAuthDashboardSignupRoute
   '/dashboard/conferences/new': typeof _protectedDashboardConferencesNewRoute
   '/dashboard/projects/new': typeof _protectedDashboardProjectsNewRoute
-  '/projects/project/$id': typeof _publicProjectsProjectIdRoute
+  '/projects/project/$title': typeof _publicProjectsProjectTitleRoute
   '/dashboard/conferences/': typeof _protectedDashboardConferencesIndexRoute
   '/dashboard/projects/': typeof _protectedDashboardProjectsIndexRoute
   '/dashboard/projects/edit/$id': typeof _protectedDashboardProjectsEditIdRoute
@@ -235,7 +235,7 @@ export interface FileRoutesByTo {
   '/auth/dashboard/signup': typeof _protectedAuthDashboardSignupRoute
   '/dashboard/conferences/new': typeof _protectedDashboardConferencesNewRoute
   '/dashboard/projects/new': typeof _protectedDashboardProjectsNewRoute
-  '/projects/project/$id': typeof _publicProjectsProjectIdRoute
+  '/projects/project/$title': typeof _publicProjectsProjectTitleRoute
   '/dashboard/conferences': typeof _protectedDashboardConferencesIndexRoute
   '/dashboard/projects': typeof _protectedDashboardProjectsIndexRoute
   '/dashboard/projects/edit/$id': typeof _protectedDashboardProjectsEditIdRoute
@@ -265,7 +265,7 @@ export interface FileRoutesById {
   '/__protected/auth/dashboard/signup': typeof _protectedAuthDashboardSignupRoute
   '/__protected/dashboard/conferences/new': typeof _protectedDashboardConferencesNewRoute
   '/__protected/dashboard/projects/new': typeof _protectedDashboardProjectsNewRoute
-  '/__public/projects/project/$id': typeof _publicProjectsProjectIdRoute
+  '/__public/projects/project/$title': typeof _publicProjectsProjectTitleRoute
   '/__protected/dashboard/conferences/': typeof _protectedDashboardConferencesIndexRoute
   '/__protected/dashboard/projects/': typeof _protectedDashboardProjectsIndexRoute
   '/__protected/dashboard/projects/edit/$id': typeof _protectedDashboardProjectsEditIdRoute
@@ -295,7 +295,7 @@ export interface FileRouteTypes {
     | '/auth/dashboard/signup'
     | '/dashboard/conferences/new'
     | '/dashboard/projects/new'
-    | '/projects/project/$id'
+    | '/projects/project/$title'
     | '/dashboard/conferences/'
     | '/dashboard/projects/'
     | '/dashboard/projects/edit/$id'
@@ -322,7 +322,7 @@ export interface FileRouteTypes {
     | '/auth/dashboard/signup'
     | '/dashboard/conferences/new'
     | '/dashboard/projects/new'
-    | '/projects/project/$id'
+    | '/projects/project/$title'
     | '/dashboard/conferences'
     | '/dashboard/projects'
     | '/dashboard/projects/edit/$id'
@@ -351,7 +351,7 @@ export interface FileRouteTypes {
     | '/__protected/auth/dashboard/signup'
     | '/__protected/dashboard/conferences/new'
     | '/__protected/dashboard/projects/new'
-    | '/__public/projects/project/$id'
+    | '/__public/projects/project/$title'
     | '/__protected/dashboard/conferences/'
     | '/__protected/dashboard/projects/'
     | '/__protected/dashboard/projects/edit/$id'
@@ -543,11 +543,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof _protectedDashboardProjectsNewRouteImport
       parentRoute: typeof _protectedDashboardRouteRoute
     }
-    '/__public/projects/project/$id': {
-      id: '/__public/projects/project/$id'
-      path: '/projects/project/$id'
-      fullPath: '/projects/project/$id'
-      preLoaderRoute: typeof _publicProjectsProjectIdRouteImport
+    '/__public/projects/project/$title': {
+      id: '/__public/projects/project/$title'
+      path: '/projects/project/$title'
+      fullPath: '/projects/project/$title'
+      preLoaderRoute: typeof _publicProjectsProjectTitleRouteImport
       parentRoute: typeof _publicRouteRoute
     }
     '/__protected/dashboard/projects/edit/$id': {
@@ -575,7 +575,7 @@ interface _publicRouteRouteChildren {
   _publicResourcesDiscipleshipRoute: typeof _publicResourcesDiscipleshipRoute
   _publicProjectsIndexRoute: typeof _publicProjectsIndexRoute
   _publicResourcesIndexRoute: typeof _publicResourcesIndexRoute
-  _publicProjectsProjectIdRoute: typeof _publicProjectsProjectIdRoute
+  _publicProjectsProjectTitleRoute: typeof _publicProjectsProjectTitleRoute
 }
 
 const _publicRouteRouteChildren: _publicRouteRouteChildren = {
@@ -593,7 +593,7 @@ const _publicRouteRouteChildren: _publicRouteRouteChildren = {
   _publicResourcesDiscipleshipRoute: _publicResourcesDiscipleshipRoute,
   _publicProjectsIndexRoute: _publicProjectsIndexRoute,
   _publicResourcesIndexRoute: _publicResourcesIndexRoute,
-  _publicProjectsProjectIdRoute: _publicProjectsProjectIdRoute,
+  _publicProjectsProjectTitleRoute: _publicProjectsProjectTitleRoute,
 }
 
 const _publicRouteRouteWithChildren = _publicRouteRoute._addFileChildren(
