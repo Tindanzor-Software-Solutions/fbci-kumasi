@@ -1,11 +1,11 @@
+import { motion } from "framer-motion"
+import { ArrowRight } from "lucide-react"
 import type { Project } from "@/features/project"
 import { routes } from "@/shared/routes"
 import { slideUp } from "@/shared/ui/Framer"
 import { Link } from "@/shared/ui/primitives/button"
 import { Image } from "@/shared/ui/primitives/Image"
 import { formatToUrlSlug } from "@/shared/utils/textFormat"
-import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
 
 type ProjectCardProps = Project
 

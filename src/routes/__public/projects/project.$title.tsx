@@ -1,9 +1,9 @@
+import { QueryClient } from "@tanstack/react-query"
+import { createFileRoute } from "@tanstack/react-router"
 import { projectDetailQuery } from "@/features/project"
 import { generateMetaData } from "@/libs/tanstack"
 import { ProjectDetailPage } from "@/screens/projects"
 import { HydrationProvider } from "@/shared/ui/HydationProvider"
-import { QueryClient } from "@tanstack/react-query"
-import { createFileRoute } from "@tanstack/react-router"
 
 export const Route = createFileRoute("/__public/projects/project/$title")({
   component: RouteComponent,
