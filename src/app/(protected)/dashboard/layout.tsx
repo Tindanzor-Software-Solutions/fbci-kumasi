@@ -1,3 +1,5 @@
+"use client"
+
 import type { PropsWithChildren } from "react"
 import { useAuthRefresh } from "@/features/auth"
 import { AwaitAuthLoad, DashboardSidebar } from "@/screens/dashboard"

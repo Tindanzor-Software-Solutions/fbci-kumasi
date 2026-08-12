@@ -1,5 +1,5 @@
+import { CHURCH_INFO } from "@/features/churches"
 import { BRANDING } from "@/shared/constants"
-import { CHURCH_INFO } from "@/shared/db"
 import { Logo } from "../ui/Logo"
 import { Link } from "../ui/primitives/button"
 import { SocialMediaLinks } from "../ui/SocialMediaLinks"

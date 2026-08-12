@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion"
 import { BRANDING } from "@/shared/constants"
 import { routes } from "@/shared/routes"

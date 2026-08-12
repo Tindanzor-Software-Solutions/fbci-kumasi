@@ -1,3 +1,5 @@
+"use client"
+
 import { type HTMLMotionProps, motion } from "framer-motion"
 
 type AnimatePositionProps = HTMLMotionProps<"div"> & {

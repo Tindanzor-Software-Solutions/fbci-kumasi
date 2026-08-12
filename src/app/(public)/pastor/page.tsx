@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
+import { CHURCH_INFO } from "@/features/churches"
 import { generateMetaData } from "@/libs/next"
 import { PastorPage } from "@/screens/pastor"
-import { CHURCH_INFO } from "@/shared/db"
 import { opengraphs } from "@/shared/routes"
 
 export const metadata: Metadata = generateMetaData({

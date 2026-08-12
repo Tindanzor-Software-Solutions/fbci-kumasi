@@ -1,3 +1,5 @@
+"use client"
+
 import { motion, useAnimation, useReducedMotion } from "framer-motion"
 import { useLayoutEffect, useState } from "react"
 import { useMediaQuery } from "@/shared/hooks/useMediaQuery"

@@ -15,7 +15,6 @@
     "noEmit": true,
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
-
     // Style Options
     // "noImplicitReturns": true,
     // "noImplicitOverride": true,
@@ -26,23 +25,22 @@
     "verbatimModuleSyntax": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "plugins": [{ "name": "next" }],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "includes": [
+  "exclude": ["node_modules", "**/.output/**", "**/dist/**"],
+  "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "**/*.ts",
-    "**/*.tsx",
-    "**/*.mts",
-    "**/*.js",
-    "**/*.mjs"
-  ],
-  "exclude": ["node_modules", "**/.output/**", "**/dist/**"]
+    "**/*.tsx"
+  ]
 }

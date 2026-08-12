@@ -1,6 +1,6 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 import { SiRumble } from "react-icons/si"
-import { CHURCH_INFO } from "../db"
+import { CHURCH_INFO } from "@/features/churches"
 import { Link } from "./primitives/button"
 
 const links = [

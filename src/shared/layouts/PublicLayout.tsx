@@ -1,20 +1,32 @@
-import { createFileRoute, Outlet } from "@tanstack/react-router"
+"use client"
+
 import { MobileFloatingCTA } from "@/features/contact/components/MobileFloatingCTA"
+import { usePathname } from "@/shared/hooks/usePathname"
 import { Footer } from "@/shared/layouts/Footer"
 import { Header } from "@/shared/layouts/Header"
+import { routes } from "@/shared/routes"
 import { BackButton } from "@/shared/ui/BackButton"
 import { AnimatePosition, motionVariants } from "@/shared/ui/Framer"
-
-export const Route = createFileRoute("/__public")({
-  component: PublicLayout,
-})
 
 const buttonVariants = motionVariants({
   hidden: { opacity: 0, x: "-40%" },
   show: { opacity: 1, x: 0 },
 })
 
-function PublicLayout() {
+const hiddenPaths = [
+  routes.auth.login,
+  routes.auth.signup,
+  routes.auth.forgotPassword,
+  routes.auth.resetPassword,
+  routes.dashboard.home,
+]
+
+const hide = (path: string) => hiddenPaths.some((p) => path.startsWith(p))
+
+export function PublicLayout({ children }: React.PropsWithChildren) {
+  const pathname = usePathname()
+  if (hide(pathname)) return children
+
   return (
     <>
       <Header />
@@ -27,7 +39,7 @@ function PublicLayout() {
         >
           <BackButton variant="primary" className="pointer-events-auto" />
         </AnimatePosition>
-        <Outlet />
+        {children}
       </div>
       <Footer />
       <MobileFloatingCTA />

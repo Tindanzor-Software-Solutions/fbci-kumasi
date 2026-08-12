@@ -1,3 +1,5 @@
+"use client"
+
 import { Check, Plus, Trash2, Upload } from "lucide-react"
 import { useCallback, useEffect, useMemo, useState } from "react"
 import type {

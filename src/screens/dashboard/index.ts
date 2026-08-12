@@ -1,3 +1,5 @@
+"use client"
+
 export { ConferencePage } from "./conferences/ConferencePage"
 export { EmptyConferenceState } from "./conferences/EmptyConferenceState"
 export { DashboardHomePage } from "./DashboardHomePage"

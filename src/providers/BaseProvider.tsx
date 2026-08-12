@@ -1,3 +1,5 @@
+"use client"
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { type ReactNode, useEffect, useState } from "react"
 import { useAuthStore } from "@/features/auth"

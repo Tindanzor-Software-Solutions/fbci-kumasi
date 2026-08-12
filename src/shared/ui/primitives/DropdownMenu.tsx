@@ -1,3 +1,5 @@
+"use client"
+
 import { ChevronDown } from "lucide-react"
 import { useCallback, useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from "@/shared/ui/Framer"

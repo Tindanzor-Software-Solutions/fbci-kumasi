@@ -1,3 +1,5 @@
+"use client"
+
 import { IMAGES } from "@/shared/constants"
 import { Footer } from "@/shared/layouts/Footer"
 import { Header } from "@/shared/layouts/Header"

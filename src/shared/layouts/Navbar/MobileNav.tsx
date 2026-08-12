@@ -1,3 +1,5 @@
+"use client"
+
 import { X } from "lucide-react"
 import { usePathname } from "@/shared/hooks/usePathname"
 import { AnimatePresence, motion } from "@/shared/ui/Framer"

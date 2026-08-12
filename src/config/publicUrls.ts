@@ -1,7 +1,13 @@
 import { getEnv } from "./utils/getEnv"
 
-const appUrl = getEnv({ name: "VITE_APP_URL" })
-const serverUri = getEnv({ name: "VITE_SERVER_URI" })
+const appUrl = getEnv({
+  name: "NEXT_PUBLIC_APP_URL",
+  value: process.env.NEXT_PUBLIC_APP_URL,
+})
+const serverUri = getEnv({
+  name: "NEXT_PUBLIC_SERVER_URI",
+  value: process.env.NEXT_PUBLIC_SERVER_URI,
+})
 
 export const publicUrls = {
   appUrl,
