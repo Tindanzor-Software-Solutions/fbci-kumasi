@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion"
 import { useProjects } from "@/features/project"
 import { staggerContainer } from "@/shared/ui/Framer"

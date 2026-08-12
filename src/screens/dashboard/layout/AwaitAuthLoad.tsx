@@ -1,3 +1,5 @@
+"use client"
+
 import type { PropsWithChildren } from "react"
 import { useAuthStore } from "@/features/auth"
 import { Spinner } from "@/shared/ui/primitives/Spinner"

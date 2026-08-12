@@ -1,4 +1,4 @@
-import { CHURCH_INFO } from "@/shared/db"
+import { CHURCH_INFO } from "@/features/churches"
 import type { PastorData } from "./data.types"
 
 const year = new Date().getFullYear()

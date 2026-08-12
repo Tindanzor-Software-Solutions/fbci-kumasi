@@ -4,6 +4,7 @@ import * as pdfjsLib from "pdfjs-dist"
 import pdfjsWorker from "pdfjs-dist/build/pdf.worker.min.mjs?url"
 import { useCallback, useEffect, useState } from "react"
 import { cn } from "@/shared/utils/cn"
+import { Image } from "./Image"
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker
 
@@ -82,7 +83,7 @@ export function PdfThumbnail({
   }
 
   return (
-    <img
+    <Image
       src={imageUrl}
       alt={alt}
       className={cn("object-cover w-full h-full", className)}

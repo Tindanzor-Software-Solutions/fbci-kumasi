@@ -1,4 +1,4 @@
-import { Link as TanstackLink } from "@tanstack/react-router"
+import NextLink from "next/link"
 import { cn } from "@/shared/utils/cn"
 import { buttonVariants } from "./constants"
 import type { LinkProps } from "./types"
@@ -55,9 +55,8 @@ export function Link({
   }
 
   return (
-    <TanstackLink
-      // biome-ignore lint/suspicious/noExplicitAny: I do not need the tanstack type
-      to={href as any}
+    <NextLink
+      href={href ?? "#"}
       className={classes}
       target={target as string | undefined}
       download={download as string | boolean | undefined}

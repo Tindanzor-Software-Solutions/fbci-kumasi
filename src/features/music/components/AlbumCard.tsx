@@ -1,6 +1,7 @@
 import { Download } from "lucide-react"
 import { AnimatePosition, slideUp } from "@/shared/ui/Framer"
 import { Link } from "@/shared/ui/primitives/button"
+import { Image } from "@/shared/ui/primitives/Image"
 import type { Album } from "../music.contract.types"
 
 type AlbumCardProps = {
@@ -11,8 +12,8 @@ export function AlbumCard({ album }: AlbumCardProps) {
   return (
     <AnimatePosition variants={slideUp}>
       <div className="flex flex-col sm:flex-row gap-6 items-start">
-        <div className="w-full sm:w-48 h-48 rounded-xl overflow-hidden bg-surface-container flex-shrink-0">
-          <img
+        <div className="w-full sm:w-48 h-48 rounded-xl overflow-hidden bg-surface-container shrink-0">
+          <Image
             src={album.coverImage}
             alt={`${album.title} cover`}
             className="w-full h-full object-cover"

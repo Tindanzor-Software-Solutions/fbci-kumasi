@@ -1,3 +1,5 @@
+"use client"
+
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
 import { AnimatePosition, slideUp } from "@/shared/ui/Framer"

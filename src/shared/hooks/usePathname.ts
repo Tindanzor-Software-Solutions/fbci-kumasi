@@ -1,6 +1,5 @@
-import { useLocation } from "@tanstack/react-router"
+import { usePathname as useLocation } from "next/navigation"
 
 export function usePathname(): string {
-  const { pathname } = useLocation()
-  return pathname
+  return useLocation()
 }

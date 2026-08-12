@@ -7,6 +7,7 @@ type ImageProps = ComponentProps<"img"> & {
 
 export function Image({ className, fallback, alt, src, ...props }: ImageProps) {
   return (
+    // biome-ignore lint/performance/noImgElement: not needed
     <img
       className={cn("object-cover", className)}
       alt={alt}

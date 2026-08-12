@@ -1,13 +1,18 @@
-import { FEATURED_MINISTRIES, type Ministry as MinistryType } from "@/shared/db"
+import {
+  type Ministry as MinistryType,
+  ministryService,
+} from "@/features/ministries"
 import { AnimatePosition, motionVariants } from "@/shared/ui/Framer"
 import { Link } from "@/shared/ui/primitives/button"
 import { Image } from "@/shared/ui/primitives/Image"
 
 export function FeaturedMinistry() {
+  const ministries = ministryService.find({ featured: true })
+
   return (
     <section className="px-margin-mobile md:px-margin-desktop py-3xl">
       <ul className="grid h-fit gap-y-40 py-20">
-        {FEATURED_MINISTRIES.map((ministry, index) => (
+        {ministries.map((ministry, index) => (
           <Ministry key={ministry.name} ministry={ministry} index={index} />
         ))}
       </ul>

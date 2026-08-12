@@ -1,5 +1,8 @@
 import { motion } from "framer-motion"
-import { MINISTRIES, type Ministry as MinistryType } from "@/shared/db"
+import {
+  type Ministry as MinistryType,
+  ministryService,
+} from "@/features/ministries"
 import {
   AnimatePosition,
   motionVariants,
@@ -9,6 +12,8 @@ import { Link } from "@/shared/ui/primitives/button"
 import { Image } from "@/shared/ui/primitives/Image"
 
 export function MinistryCards() {
+  const ministries = ministryService.find()
+
   return (
     <section className="section-gap">
       <div className="container-app">
@@ -19,7 +24,7 @@ export function MinistryCards() {
           viewport={{ once: true }}
           className="grid h-fit gap-y-20 lg:gap-y-30"
         >
-          {MINISTRIES.map((ministry, index) => (
+          {ministries.map((ministry, index) => (
             <Ministry key={ministry.name} ministry={ministry} index={index} />
           ))}
         </motion.ul>

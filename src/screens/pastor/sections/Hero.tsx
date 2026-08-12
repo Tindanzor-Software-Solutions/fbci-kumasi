@@ -1,5 +1,5 @@
+import { CHURCH_INFO } from "@/features/churches"
 import { IMAGES } from "@/shared/constants"
-import { CHURCH_INFO } from "@/shared/db"
 import { routes } from "@/shared/routes"
 import { AnimatePosition, slideUp } from "@/shared/ui/Framer"
 import { BackgroundImage } from "@/shared/ui/primitives/BackgroundImage"

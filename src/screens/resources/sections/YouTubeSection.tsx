@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react"
-import { CHURCH_INFO } from "@/shared/db"
+import { CHURCH_INFO } from "@/features/churches"
 import { AnimatePosition, slideUp } from "@/shared/ui/Framer"
 import { Link } from "@/shared/ui/primitives/button"
 

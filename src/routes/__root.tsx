@@ -4,7 +4,7 @@ import {
   Outlet,
   Scripts,
 } from "@tanstack/react-router"
-import { generateMetaData } from "@/libs/tanstack"
+import { generateMetaData } from "@/libs/next"
 import { BaseProvider } from "@/providers/BaseProvider"
 import { BRANDING } from "@/shared/constants"
 import { ErrorPage } from "@/shared/ui/ErrorPage"
@@ -20,6 +20,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "apple-mobile-web-app-title", content: "Consensus" },
       ...generateMetaData({
         title: BRANDING.name,
         description: BRANDING.description,

@@ -1,3 +1,5 @@
+"use client"
+
 import { FolderOpen, Plus } from "lucide-react"
 import { useProjects } from "@/features/project"
 import { DashboardTopbar } from "@/screens/dashboard/"

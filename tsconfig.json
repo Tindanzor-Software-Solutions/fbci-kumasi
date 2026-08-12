@@ -26,10 +26,23 @@
     "verbatimModuleSyntax": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
+    "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.js", "**/*.mjs"],
+  "includes": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mts",
+    "**/*.js",
+    "**/*.mjs"
+  ],
   "exclude": ["node_modules", "**/.output/**", "**/dist/**"]
 }

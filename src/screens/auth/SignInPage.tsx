@@ -1,3 +1,5 @@
+"use client"
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import { User } from "lucide-react"
 import { useSignin } from "@/features/auth"

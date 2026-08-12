@@ -1,4 +1,4 @@
-import { CHURCH_INFO, type ServiceTime } from "@/shared/db"
+import { CHURCH_INFO, type ServiceTime } from "@/features/churches"
 import { AnimatePosition, slideUp } from "@/shared/ui/Framer"
 
 export function ServiceTimes() {

@@ -1,3 +1,5 @@
+"use client"
+
 import { useConference } from "@/features/conference"
 import { Spinner } from "@/shared/ui/primitives/Spinner"
 import { Closing } from "./sections/Closing"

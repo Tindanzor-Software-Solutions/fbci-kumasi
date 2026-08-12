@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { CHURCH_INFO } from "@/shared/db"
+import { CHURCH_INFO } from "@/features/churches"
 import { routes } from "@/shared/routes"
 import {
   AnimatePosition,
