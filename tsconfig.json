@@ -37,6 +37,7 @@
   "exclude": ["node_modules", "**/.output/**", "**/dist/**"],
   "include": [
     "next-env.d.ts",
+    "src/env.d.ts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
