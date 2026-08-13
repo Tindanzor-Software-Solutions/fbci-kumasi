@@ -4,6 +4,8 @@ import { generateMetaData } from "@/libs/next"
 import { BaseProvider } from "@/providers/BaseProvider"
 import { BRANDING } from "@/shared/constants"
 import { PublicLayout } from "@/shared/layouts/PublicLayout"
+
+// @ts-expect-error: Missing types
 import "./globals.css"
 
 export const metadata: Metadata = generateMetaData({
@@ -14,7 +16,10 @@ export const metadata: Metadata = generateMetaData({
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="FBCI" />
+      </head>
       <body className="bg-background overflow-x-hidden max-w-screeen text-on-surface font-body antialiased">
         <BaseProvider>
           <PublicLayout>{children}</PublicLayout>

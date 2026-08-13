@@ -48,12 +48,21 @@ export function ProjectForm({
         <div className="mt-4 space-y-4">
           <div>
             <Label htmlFor="title">Title</Label>
-            <Input id="title" {...register("title")} />
+            <Input
+              id="title"
+              placeholder="Project Title"
+              {...register("title")}
+            />
             <FieldError message={errors.title?.message} />
           </div>
           <div>
             <Label htmlFor="story">Story</Label>
-            <Textarea id="story" rows={5} {...register("story")} />
+            <Textarea
+              id="story"
+              placeholder="Say something about the project..."
+              rows={5}
+              {...register("story")}
+            />
             <FieldError message={errors.story?.message} />
           </div>
         </div>
@@ -91,7 +100,11 @@ export function ProjectForm({
             </div>
             <div>
               <Label htmlFor="completionDate">Completion Date</Label>
-              <Input id="completionDate" {...register("completionDate")} />
+              <Input
+                id="completionDate"
+                type="date"
+                {...register("completionDate")}
+              />
               <FieldError message={errors.completionDate?.message} />
             </div>
           </div>
@@ -114,22 +127,30 @@ export function ProjectForm({
             <Input
               id="goal"
               type="number"
+              step="10"
+              placeholder="1000"
               {...register("goal", { valueAsNumber: true })}
             />
             <FieldError message={errors.goal?.message} />
           </div>
           <div>
-            <Label htmlFor="funded">Funded ($)</Label>
+            <Label htmlFor="funded">Funded Amount ($)</Label>
             <Input
               id="funded"
               type="number"
+              step="10"
+              placeholder="400"
               {...register("funded", { valueAsNumber: true })}
             />
             <FieldError message={errors.funded?.message} />
           </div>
           <div>
             <Label htmlFor="paymentLink">Payment Link</Label>
-            <Input id="paymentLink" {...register("paymentLink")} />
+            <Input
+              id="paymentLink"
+              placeholder="Enter payment form link"
+              {...register("paymentLink")}
+            />
             <FieldError message={errors.paymentLink?.message} />
           </div>
         </div>

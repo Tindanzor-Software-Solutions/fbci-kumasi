@@ -4,6 +4,8 @@ import { generateMetaData } from "@/libs/next"
 import { ProjectsPage } from "@/screens/projects"
 import { HydrationProvider } from "@/shared/ui/HydationProvider"
 
+export const revalidate = 7_200
+
 export const metadata: Metadata = generateMetaData({
   title: "Projects",
   description:

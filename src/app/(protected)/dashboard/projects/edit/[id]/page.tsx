@@ -13,6 +13,7 @@ type PageProps = {
     id: string
   }>
 }
+
 export default async function PageRoute({ params }: PageProps) {
   const id = (await params).id
 

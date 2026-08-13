@@ -4,6 +4,8 @@ import { generateMetaData } from "@/libs/next"
 import { FundedProjectsPage } from "@/screens/projects"
 import { HydrationProvider } from "@/shared/ui/HydationProvider"
 
+export const revalidate = 7_200
+
 export const metadata: Metadata = generateMetaData({
   title: "Funded Projects",
   description: "See the fully funded missions and community projects of FBCI.",

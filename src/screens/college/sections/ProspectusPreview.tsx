@@ -1,3 +1,5 @@
+"use client"
+
 import { Download, Eye } from "lucide-react"
 import { AnimatePosition, slideUp } from "@/shared/ui/Framer"
 import { Link } from "@/shared/ui/primitives/button"
@@ -24,7 +26,7 @@ export function ProspectusPreview() {
                 <PdfThumbnail
                   src={prospectus.url}
                   alt="HACWA Prospectus Preview"
-                  className="w-full aspect-[3/4]"
+                  className="w-full aspect-3/4"
                   width={300}
                 />
               </div>

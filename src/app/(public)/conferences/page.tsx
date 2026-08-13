@@ -5,6 +5,8 @@ import { generateMetaData } from "@/libs/next"
 import { ConferencesPage } from "@/screens/conferences"
 import { HydrationProvider } from "@/shared/ui/HydationProvider"
 
+export const revalidate = 28_800
+
 export const generateMetadata = async (): Promise<Metadata> => {
   const qc = new QueryClient()
   const query = conferenceQuery()

@@ -3,8 +3,8 @@ import { AuthRedirectError } from "./features/auth/auth.error"
 import { routes } from "./shared/routes"
 
 const AUTH_PATHS = [routes.auth.login, routes.auth.signup]
-
 const PROTECTED_PATHS = [routes.dashboard.home]
+const COOKIE_NAME = "fbci_auth"
 
 export const config = {
   matcher: ["/dashboard/:path*", "/auth/dashboard/:path"],
@@ -16,7 +16,7 @@ export default async function proxy(request: NextRequest) {
   try {
     await authGuard.enforce(
       request.nextUrl.pathname,
-      request.cookies.get("fbci_auth")?.value,
+      request.cookies.get(COOKIE_NAME)?.value,
     )
 
     return NextResponse.next()
@@ -24,6 +24,8 @@ export default async function proxy(request: NextRequest) {
     if (error instanceof AuthRedirectError) {
       return NextResponse.redirect(gotoDest(error.destination))
     }
+
+    if (!(error instanceof AuthRedirectError)) throw error
   }
 
   return NextResponse.next()

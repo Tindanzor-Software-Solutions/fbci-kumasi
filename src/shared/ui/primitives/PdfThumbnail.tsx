@@ -1,12 +1,11 @@
 "use client"
 
 import * as pdfjsLib from "pdfjs-dist"
-import pdfjsWorker from "pdfjs-dist/build/pdf.worker.min.mjs?url"
 import { useCallback, useEffect, useState } from "react"
 import { cn } from "@/shared/utils/cn"
 import { Image } from "./Image"
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker
+pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs"
 
 type PdfThumbnailProps = {
   src: string

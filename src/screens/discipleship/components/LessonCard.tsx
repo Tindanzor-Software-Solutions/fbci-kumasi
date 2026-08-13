@@ -1,3 +1,5 @@
+"use client"
+
 import { Download, Eye, Image } from "lucide-react"
 import { Link } from "@/shared/ui/primitives/button"
 import { PdfThumbnail } from "@/shared/ui/primitives/PdfThumbnail"

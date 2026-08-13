@@ -5,6 +5,8 @@ import { generateMetaData } from "@/libs/next"
 import { ProjectDetailPage } from "@/screens/projects"
 import { HydrationProvider } from "@/shared/ui/HydationProvider"
 
+export const revalidate = 7_200
+
 type PageProps = {
   params: Promise<{
     title: string

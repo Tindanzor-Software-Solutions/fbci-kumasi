@@ -11,6 +11,7 @@ import { useNavigate } from "../hooks/useNavigate"
 
 export function NotFound() {
   const router = useNavigate()
+
   return (
     <>
       <Header />
