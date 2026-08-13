@@ -9,10 +9,11 @@
     "ignoreUnknown": false,
     "includes": [
       "**",
-      "!src/routeTree.gen.ts",
+      "!.next",
       "!node_modules",
       "!.output",
-      "!public"
+      "!public",
+      "!src/app/icon0.svg"
     ]
   },
   "formatter": {
@@ -24,6 +25,10 @@
     "enabled": true,
     "rules": {
       "preset": "recommended"
+    },
+    "domains": {
+      "next": "recommended",
+      "react": "recommended"
     }
   },
   "css": {

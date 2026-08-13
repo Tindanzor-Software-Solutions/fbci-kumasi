@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion"
 import type { Conference } from "@/features/conference"
 import { AnimatePosition, slideUp, staggerContainer } from "@/shared/ui/Framer"

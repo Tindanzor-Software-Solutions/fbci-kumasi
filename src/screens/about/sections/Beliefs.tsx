@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion"
 import { BRANDING } from "@/shared/constants"
 import { routes } from "@/shared/routes"
@@ -52,8 +54,8 @@ const beliefs: Belief[] = [
 ]
 
 const scriptureVerses = [
-  "I Corinthians 3:10–15",
-  "Ephesians 2:8–10",
+  "I Corinthians 3:10-15",
+  "Ephesians 2:8-10",
   "Matthew 6:20",
   "I Peter 2:9",
 ]

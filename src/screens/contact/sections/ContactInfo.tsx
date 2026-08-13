@@ -1,4 +1,4 @@
-import { CHURCH_INFO } from "@/shared/db"
+import { CHURCH_INFO } from "@/features/churches"
 import { AnimatePosition, slideUp } from "@/shared/ui/Framer"
 
 export function ContactInfo() {

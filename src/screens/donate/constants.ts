@@ -1,5 +1,5 @@
 import { Mail, Phone } from "lucide-react"
-import { CHURCH_INFO } from "@/shared/db"
+import { CHURCH_INFO } from "@/features/churches"
 
 export const IMPACTS = [
   {

@@ -1,3 +1,5 @@
+"use client"
+
 import { IMAGES } from "@/shared/constants"
 import { Footer } from "@/shared/layouts/Footer"
 import { Header } from "@/shared/layouts/Header"
@@ -9,6 +11,7 @@ import { useNavigate } from "../hooks/useNavigate"
 
 export function NotFound() {
   const router = useNavigate()
+
   return (
     <>
       <Header />

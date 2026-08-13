@@ -1,3 +1,5 @@
+"use client"
+
 export { VideoPicker } from "./ui/VideoPicker"
 export { VideoPreview } from "./ui/VideoPreview"
 export { VideoUploadField } from "./ui/VideoUploadField"

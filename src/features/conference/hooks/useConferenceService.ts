@@ -1,3 +1,5 @@
+"use client"
+
 import { useMemo } from "react"
 import { useApiClient } from "@/hooks/useApiClient"
 import { createConferenceService } from "../conference.services"

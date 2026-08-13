@@ -1,4 +1,4 @@
-import { useRouter } from "@tanstack/react-router"
+import { useRouter } from "next/navigation"
 import { useMemo } from "react"
 
 export function useNavigate() {
@@ -6,11 +6,11 @@ export function useNavigate() {
 
   const routing = useMemo(
     () => ({
-      push: (url: string) => router.navigate({ href: url }),
-      replace: (url: string) => router.navigate({ href: url, replace: true }),
-      refresh: () => router.invalidate({ sync: true }),
-      back: () => router.history.back(),
-      forward: () => router.history.forward(),
+      push: (url: string) => router.push(url),
+      replace: (url: string) => router.replace(url),
+      refresh: () => router.refresh(),
+      back: () => router.back(),
+      forward: () => router.forward(),
     }),
     [router],
   )

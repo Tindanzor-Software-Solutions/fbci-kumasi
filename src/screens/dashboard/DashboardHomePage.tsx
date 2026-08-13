@@ -1,3 +1,5 @@
+"use client"
+
 import { useProjects } from "@/features/project"
 import { useAuthenticatedUser } from "@/features/user"
 import { DashboardTopbar } from "@/screens/dashboard/"

@@ -1,4 +1,4 @@
-import { CHURCH_INFO } from "@/shared/db"
+import { CHURCH_INFO } from "@/features/churches"
 import { AnimatePosition, slideUp } from "@/shared/ui/Framer"
 import { Link } from "@/shared/ui/primitives/button"
 import { PaymentForm } from "@/shared/ui/primitives/PaymentForm"

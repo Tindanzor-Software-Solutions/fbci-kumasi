@@ -1,3 +1,5 @@
+"use client"
+
 import { useMemo } from "react"
 import { useAuthStore } from "@/features/auth"
 import { createFetchDataClient } from "@/libs/fetchData"

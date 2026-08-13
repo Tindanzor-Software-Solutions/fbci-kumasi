@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion"
 import { Download } from "lucide-react"
 import type { Conference, ConferenceResource } from "@/features/conference"

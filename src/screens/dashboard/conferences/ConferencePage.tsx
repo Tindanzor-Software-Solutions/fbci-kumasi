@@ -1,3 +1,5 @@
+"use client"
+
 import { useConference } from "@/features/conference"
 import { DashboardTopbar } from "@/screens/dashboard"
 import { routes } from "@/shared/routes"

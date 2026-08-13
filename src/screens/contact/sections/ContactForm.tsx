@@ -1,3 +1,5 @@
+"use client"
+
 import { useContact } from "@/features/contact"
 import { AnimatePosition, slideUp } from "@/shared/ui/Framer"
 import { Button } from "@/shared/ui/primitives/button"

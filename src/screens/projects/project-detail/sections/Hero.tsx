@@ -3,6 +3,7 @@ import { routes } from "@/shared/routes"
 import { AnimatePosition, slideInLeft, slideUp } from "@/shared/ui/Framer"
 import { Link } from "@/shared/ui/primitives/button"
 import { Image } from "@/shared/ui/primitives/Image"
+import { formatToUrlSlug } from "@/shared/utils/textFormat"
 
 type HeroProps = {
   project: Project
@@ -81,7 +82,9 @@ export function Hero({ project }: HeroProps) {
               )}
             </div>
             <Link
-              href={routes.projects.projectByIdAndGive(project.id)}
+              href={routes.projects.projectByIdAndGive(
+                formatToUrlSlug(`${project.title} ${project.id}`),
+              )}
               variant="primary"
               size="lg"
               className="w-full flex items-center justify-center gap-2"

@@ -1,3 +1,5 @@
+"use client"
+
 import { Link, RefreshCw } from "lucide-react"
 import { useCallback, useEffect } from "react"
 import { useInvite } from "@/features/auth/invite"

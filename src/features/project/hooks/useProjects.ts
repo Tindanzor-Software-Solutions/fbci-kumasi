@@ -1,3 +1,5 @@
+"use client"
+
 import { useQuery } from "@tanstack/react-query"
 import type { ProjectFilters } from "../project.contract.types"
 import { projectListQuery } from "../project.queries"

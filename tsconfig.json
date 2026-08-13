@@ -10,12 +10,11 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "incremental": true,
     "noEmit": true,
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
-
     // Style Options
     // "noImplicitReturns": true,
     // "noImplicitOverride": true,
@@ -24,12 +23,24 @@
     "noFallthroughCasesInSwitch": true,
     // "noPropertyAccessFromIndexSignature": true,
     "verbatimModuleSyntax": true,
-    "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.js", "**/*.mjs"],
-  "exclude": ["node_modules", "**/.output/**", "**/dist/**"]
+  "exclude": ["node_modules", "**/.output/**", "**/dist/**"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts",
+    "src/env.d.ts"
+  ]
 }

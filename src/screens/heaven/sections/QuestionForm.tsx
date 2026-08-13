@@ -1,5 +1,7 @@
+"use client"
+
+import { CHURCH_INFO } from "@/features/churches"
 import { useContact } from "@/features/contact"
-import { CHURCH_INFO } from "@/shared/db"
 import { AnimatePosition, slideUp } from "@/shared/ui/Framer"
 import { Button, Link } from "@/shared/ui/primitives/button"
 import { FieldError } from "@/shared/ui/primitives/FieldError"

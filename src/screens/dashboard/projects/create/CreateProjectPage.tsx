@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react"
 import { useImageImpUpload } from "@/features/images"
 import { useCreateProject } from "@/features/project"

@@ -1,3 +1,5 @@
+"use client"
+
 import { useCallback, useEffect } from "react"
 import { AnimatePresence, motion } from "@/shared/ui/Framer"
 import { Button } from "@/shared/ui/primitives/button"

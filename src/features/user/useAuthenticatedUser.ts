@@ -1,3 +1,5 @@
+"use client"
+
 import { useUserStore } from "@/features/auth"
 import type { UserAccountType } from "./user.contract.types"
 

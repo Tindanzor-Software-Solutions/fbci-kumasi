@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion"
 import { AnimatePosition, slideUp, staggerContainer } from "@/shared/ui/Framer"
 import { pastorData } from "../data"

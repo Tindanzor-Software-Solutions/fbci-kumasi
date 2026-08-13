@@ -1,3 +1,5 @@
+"use client"
+
 import { useProject } from "@/features/project"
 import { Hero } from "./sections/Hero"
 import { MediaViewer } from "./sections/MediaViewer"

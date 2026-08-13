@@ -1,6 +1,6 @@
 import { Mail, Phone } from "lucide-react"
 import { FaFacebook } from "react-icons/fa"
-import { CHURCH_INFO } from "@/shared/db"
+import { CHURCH_INFO } from "@/features/churches"
 
 export const contactOptions = [
   {

@@ -1,5 +1,6 @@
+"use client"
+
 export type * from "./images.contracts.types"
-export * from "./images.contracts.types"
 export * from "./images.useImageService"
 export * from "./models/useImageUpload/useImageImpUpload"
 export type * from "./models/useImageUpload/useImageUpload.types"

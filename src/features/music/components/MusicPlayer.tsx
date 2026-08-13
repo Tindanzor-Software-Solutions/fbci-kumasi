@@ -1,3 +1,5 @@
+"use client"
+
 import { useCallback } from "react"
 import { cn } from "@/shared/utils/cn"
 import { useAudioPlayer } from "../hooks/useAudioPlayer"

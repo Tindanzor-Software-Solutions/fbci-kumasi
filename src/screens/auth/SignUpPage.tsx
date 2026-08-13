@@ -1,9 +1,11 @@
+"use client"
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import { AtSign, Mail, User } from "lucide-react"
 import { useState } from "react"
 import { useSignup } from "@/features/auth"
 import { signupValidator } from "@/features/auth/auth.validators"
-import { Route } from "@/routes/__protected/auth/dashboard/signup"
+import { useSearchParams } from "@/shared/hooks/useNavigation"
 import { routes } from "@/shared/routes"
 import { Button, Link } from "@/shared/ui/primitives/button"
 import { FieldError } from "@/shared/ui/primitives/FieldError"
@@ -33,7 +35,7 @@ function getPasswordStrength(password: string): number {
 }
 
 export function SignUpPage() {
-  const { access } = Route.useSearch()
+  const { access } = useSearchParams<{ access: string }>()
   const { register, formState, onSubmit } = useSignup({
     resolver: zodResolver(signupValidator),
   })
@@ -53,7 +55,7 @@ export function SignUpPage() {
         </div>
 
         <form onSubmit={onSubmit} className="space-y-4" noValidate>
-          <input type="hidden" {...register("access")} value={access} />
+          <input type="hidden" {...register("access")} value={access ?? ""} />
 
           {formState.errors.root && (
             <div className="rounded-xl bg-error-container p-3 text-sm text-on-error-container">
