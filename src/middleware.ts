@@ -16,6 +16,7 @@ export default async function proxy(request: NextRequest) {
   try {
     await authGuard.enforce(
       request.nextUrl.pathname,
+
       request.cookies.get(COOKIE_NAME)?.value,
     )
 
