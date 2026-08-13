@@ -20,7 +20,7 @@ type Metadata = {
   opengraph: Opengraph
   siteName: string
   url: string
-  metadataBase: string
+  metadataBase: URL
   twitter: {
     card: string
     site: string
@@ -50,7 +50,7 @@ export function generateMetaData<P extends string>({
     url: getPath(path),
     siteName: toCapitalized(BRANDING.name),
     keywords: keywords ?? "",
-    metadataBase: publicUrls.appUrl,
+    metadataBase: new URL("/", publicUrls.appUrl),
     opengraph: {
       title: pageTitle(title),
       description: pageDescription(description),
