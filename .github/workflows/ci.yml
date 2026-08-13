@@ -10,8 +10,8 @@ jobs:
     environment: test
     name: Lint and build
     env:
-      NEXT_PUBLIC_SERVER_URI: "test"
-      NEXT_PUBLIC_APP_URL: "test"
+      NEXT_PUBLIC_SERVER_URI: ${{ secrets.SERVER_URI }}
+      NEXT_PUBLIC_APP_URL: ${{ secrets.APP_URL }}
 
     runs-on: ubuntu-latest
 
